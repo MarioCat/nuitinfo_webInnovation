@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Protection civile</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+				<div id="menu">
+					<li><a href="accueil.html">ACCUEIL</a></li>
+					<li><a href="actualites.html">NEWS</a></li>
+					<li><a href="page_contacts.html">CONTACTS</a></li>
+				</div>
+            <img src="{% static "blog/logo_securite_civile.png" %}" alt="Logo secu"/>
+			<h2>Protection civile</h2>
+        </div>
+
+		<div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+		
+		<div id="footer">
+			<h6>Tous droits reservés. Team 404. 2015</h6>
+		</div>
+        
+    </body>
+</html>
